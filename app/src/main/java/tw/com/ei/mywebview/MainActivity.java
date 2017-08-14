@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import java.net.URI;
@@ -22,13 +23,17 @@ public class MainActivity extends AppCompatActivity {
     public void initWebView(){
         //webview.loadUrl("https://www.mlb.com/");
         //載入本機的HTML檔案 前面兩個//=網頁的//，第三根/ 代表根目錄..
-        webview.loadUrl("file:///android_asset/simon.html");
+        webview.loadUrl("file:///android_asset/page2.html");
+        WebSettings settings=webview.getSettings();
+        settings.setJavaScriptEnabled(true);//開啟使用JAVASCRIPT
     }
     public void Button1(View v){
+        /*
         Uri uri= Uri.parse("https://www.mlb.com/");
         Intent it=new Intent(Intent.ACTION_VIEW,uri);
         startActivity(it);
-
+        */
+        webview.loadUrl("javascript:test2()");//呼叫javascript的方法
     }
     public void Button2(View v){
 
