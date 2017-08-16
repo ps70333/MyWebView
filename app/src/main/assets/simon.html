@@ -1,3 +1,23 @@
-<h1>Simon ~~~~~</h1>
-<hr>
-Hello Simon~~
+<script>
+    function test1(){
+        var here = document.getElementById('here');
+        here.innerHTML = parseInt(Math.random()*49+1);
+    }
+    function test2(who){
+        var here = document.getElementById('here2');
+        here.innerHTML = who;
+    }
+    function test3(){
+        simon.m1();
+    }
+</script>
+<h1>test</h1>
+<hr />
+Hello, Simon<br />
+<a href='brad2.html'>Next</a>
+<input type='button' value='test1' onclick="test1()"><br>
+<div id='here'></div>
+<hr />
+<div id='here2'></div>
+<hr />
+<input type='button' onclick="test3()" value="click" />
